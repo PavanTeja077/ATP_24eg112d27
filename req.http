@@ -1,0 +1,70 @@
+### Read all users(req to protected route)
+GET http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBlbmd1aW4xMzRAZ21haWwuY29tIiwiaWF0IjoxNzcyOTU0NzgzLCJleHAiOjE3NzI5NTgzODN9.Ula7_S8Njy8wWxC64U_EXUdvTNuUxoLM0ttrIVVoJTw; Path=/; HttpOnly; SameSite=Lax
+### read a user by id
+GET http://localhost:4000/user-api/users/69aa69499a3c9ad68cff9e01
+### create a new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"pavan",
+    "password":"1234",
+    "email":"penguin134@gmail.com",
+    "age":30
+}
+###user login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+"email":"penguin134@gmail.com",
+"password":"1234"
+}
+
+###update the user 
+PUT http://localhost:4000/user-api/users/
+
+Content-Type: application/json
+
+{
+    "username":"tejza",
+    "password":"paavan",
+    "email":"pavan@gmail.com",
+    "age":13
+}
+
+###
+DELETE http://localhost:4000/user-api/users/69aa8ca766ec7cc65bd0dc4e
+###add Product to user cart
+PUT http://localhost:4000/user-api/cart/product-id/69b2602b33bd5cd2e7c29d35
+
+###product 
+### Read all users
+GET http://localhost:4000/product-api/products
+### read a user by id
+GET http://localhost:4000/product-api/products
+### create a new user
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+   "productId":10,
+   "productName":"book",
+   "price":11000,
+   "brand":"Classmate"
+}
+###update the product
+PUT http://localhost:4000/product-api/products/102
+
+Content-Type: application/json
+{
+   "productName":"pen",
+   "price":11000,
+   "brand":"Classmate   
+}
+
+###
+DELETE http://localhost:4000/product-api/products/101
+###
+PUT http://localhost:4000/product-api/products
