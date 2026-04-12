@@ -1,0 +1,18 @@
+{
+  "name": "mern-mini-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run dev --prefix Frontend",
+    "server": "npm start --prefix EMP-API"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.14.0",
+    "cors": "^2.8.6",
+    "nodemon": "^3.1.14",
+    "react-hook-form": "^7.72.0",
+    "react-router": "^7.13.2",
+    "tailwindcss": "^4.2.2",
+    "zustand": "^5.0.12"
+  }
+}
