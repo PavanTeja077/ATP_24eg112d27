@@ -1,0 +1,49 @@
+### Read all users
+GET http://localhost:3100/user-api/users
+### read a user by id
+GET http://localhost:3100/user-api/users/12
+### create a new user
+POST http://localhost:3100/user-api/users
+Content-Type: application/json
+
+{
+    "id":12,
+    "name":"pavan",
+    "age":19
+}
+###
+PUT http://localhost:3100/user-api/users
+Content-Type: application/json
+
+{
+    "id":5,
+    "name":"teja",
+    "age":18
+}
+
+###
+DELETE http://localhost:3100/user-api/users/5
+###
+GET http://localhost:3100/product
+###
+POST http://localhost:3100/product
+Content-Type: application/json
+
+{
+"pId":10,
+"name":"book",
+"brand":"classmate",
+"price":500
+}
+###
+PUT http://localhost:3100/product
+Content-Type:application/json
+
+{
+"pId":10,
+"name":"pen",
+"brand":"classmate",
+"price":15
+}
+###
+DELETE http://localhost:3100/product/10
