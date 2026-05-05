@@ -53,11 +53,11 @@ app.use((err, req, res, next) => {
   console.log("Full error:", JSON.stringify(err, null, 2));
   //ValidationError
   if (err.name === "ValidationError") {
-    return res.status(400).json({ message: "error occurred", error: err.message });
+    return res.status(400).json({ message: err.message, error: err.message });
   }
   //CastError
   if (err.name === "CastError") {
-    return res.status(400).json({ message: "error occurred", error: err.message });
+    return res.status(400).json({ message: err.message, error: err.message });
   }
   const errCode = err.code ?? err.cause?.code ?? err.errorResponse?.code;
   const keyValue = err.keyValue ?? err.cause?.keyValue ?? err.errorResponse?.keyValue;
@@ -65,12 +65,13 @@ app.use((err, req, res, next) => {
   if (errCode === 11000) {
     const field = Object.keys(keyValue)[0];
     const value = keyValue[field];
+    const errMsg = `${field} "${value}" already exists`;
     return res.status(409).json({
-      message: "error occurred",
-      error: `${field} "${value}" already exists`,
+      message: errMsg,
+      error: errMsg,
     });
   }
 
   //send server side error
-  res.status(500).json({ message: "error occurred", error: "Server side error" });
+  res.status(500).json({ message: err.message || "Server side error", error: "Server side error" });
 });
