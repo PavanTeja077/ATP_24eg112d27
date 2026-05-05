@@ -1,0 +1,72 @@
+### read all users(req to protected routw
+GET  http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpc2hudUBtYWlsIiwiaWF0IjoxNzcyODc4NTgwLCJleHAiOjE3NzI5NjQ5ODB9._MBQYZycSZJno2kUuvBW0gGHx0C74fDSC0XkvabdakE; Path=/; HttpOnly; SameSite=Lax
+
+###read a user by id
+GET http://localhost:4000/user-api/user
+###create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"vishnu",
+    "password":"vishnu",
+    "email":"teja@mail",
+    "age":19
+}
+
+### update the user
+PUT http://localhost:4000/user-api/users/69aa684e3219dfec1b9e9d90
+Content-Type: application/json
+
+{
+    "username":"vishnu",
+    "password":"vishnu",
+    "email":"vishnu@mail",
+    "age":19
+}
+### user login
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email":"vishnu@mail",
+    "password":"teja"
+}
+### delete the user
+DELETE http://localhost:4000/user-api/users/69aa91c2d5f5fdf6f2730e6b
+
+### add product to cart
+PUT http://localhost:4000/user-api/cart/product-id/
+
+### read all products
+GET http://localhost:4000/product-api/products
+### read all products by brand
+GET http://localhost:4000/product-api/products/apple
+###create a product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productID": 2,
+    "productName":"mobile",
+    "brand":"apple",
+    "price":50000
+
+
+}
+###update product
+POST  http://localhost:3000/product-api/products
+Content-Type: application/json
+
+{
+    "productID":4,
+    "name":"mobile",
+    "brand":"samsung",
+    "price":40000
+
+}
+###Delete the product
+DELETE http://localhost:3000/product-api/products/4
+
+
