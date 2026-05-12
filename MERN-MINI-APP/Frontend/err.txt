@@ -1,0 +1,21 @@
+
+> frontend@0.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 4 modules transformed.
+\n[31mx[39m Build failed in 1.18s
+[31merror during build:
+[31m[vite:css] [postcss] postcss-import: C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\tailwindcss\lib\index.js:1:1: Unknown word "use strict"[31m
+file: [36mC:/Users/PavanTeja/OneDrive/Desktop/MERN-MINI-APP/Frontend/src/index.css:1:0[31m
+    at Input.error (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\input.js:135:16)
+    at Parser.unknownWord (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\parser.js:595:22)
+    at Parser.other (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\parser.js:437:12)
+    at Parser.parse (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\parser.js:472:16)
+    at parse (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\parse.js:11:12)
+    at get root (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\no-work-result.js:43:14)
+    at Result.get [as root] (C:\Users\PavanTeja\OneDrive\Desktop\MERN-MINI-APP\Frontend\node_modules\postcss\lib\no-work-result.js:76:21)
+    at loadImportContent (file:///C:/Users/PavanTeja/OneDrive/Desktop/MERN-MINI-APP/Frontend/node_modules/vite/dist/node/chunks/dep-BB45zftN.js:867:33)
+    at async Promise.all (index 0)
+    at async resolveImportId (file:///C:/Users/PavanTeja/OneDrive/Desktop/MERN-MINI-APP/Frontend/node_modules/vite/dist/node/chunks/dep-BB45zftN.js:800:27)[39m
