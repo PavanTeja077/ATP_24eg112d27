@@ -1,47 +1,89 @@
-Complete Frontend README.md
-Blog App Frontend
+
+# Complete Frontend README.md
+
+# Blog App Frontend
+
 Frontend application for the MERN Stack Blog Application developed using React and Vite.
 
 This frontend provides:
 
-User authentication UI
-Article management interface
-Protected routing
-Admin dashboard
-Author dashboard
-User dashboard
-Responsive blog viewing experience
-API integration with backend
+* User authentication UI
+* Article management interface
+* Protected routing
+* Admin dashboard
+* Author dashboard
+* User dashboard
+* Responsive blog viewing experience
+* API integration with backend
+
 The frontend communicates with backend APIs using Axios and manages global state using Zustand.
 
 Frontend of the MERN Blog Application built using React, Vite, Tailwind CSS, Zustand, and React Router.
 
-Tech Stack
-React.js
-Vite
-Tailwind CSS
-React Router
-Axios
-Zustand
-React Hook Form
-React Hot Toast
-Project Setup
-1. Navigate to frontend folder
+---
+
+# Tech Stack
+
+* React.js
+* Vite
+* Tailwind CSS
+* React Router
+* Axios
+* Zustand
+* React Hook Form
+* React Hot Toast
+
+---
+
+# Project Setup
+
+## 1. Navigate to frontend folder
+
+```bash
 cd frontend
-2. Install dependencies
+```
+
+## 2. Install dependencies
+
+```bash
 npm install
-3. Create .env file
+```
+
+## 3. Create .env file
+
 Example:
 
+```env
 VITE_API_URL=http://localhost:5000
-Run Frontend
-Development mode
+```
+
+---
+
+# Run Frontend
+
+## Development mode
+
+```bash
 npm run dev
-Build for production
+```
+
+## Build for production
+
+```bash
 npm run build
-Preview production build
+```
+
+## Preview production build
+
+```bash
 npm run preview
-Detailed Frontend Folder Structure
+```
+
+---
+
+# Detailed Frontend Folder Structure
+
+```bash
 frontend/
 │
 ├── public/                         # Static files
@@ -64,216 +106,318 @@ frontend/
 ├── package.json                    # Dependency list
 ├── vite.config.js                  # Vite configuration
 └── .env                            # Environment variables
-Important Files Explanation
-src/main.jsx
+```
+
+---
+
+# Important Files Explanation
+
+## src/main.jsx
+
 Application entry point.
 
 Responsibilities:
 
-Renders React app
-Connects React with DOM
-Loads App component
-src/App.jsx
+* Renders React app
+* Connects React with DOM
+* Loads App component
+
+---
+
+## src/App.jsx
+
 Main routing component of the frontend.
 
 Responsibilities:
 
-Defines all routes
-Controls navigation flow
-Loads components dynamically
-Protects secure routes
-Manages layout rendering
+* Defines all routes
+* Controls navigation flow
+* Loads components dynamically
+* Protects secure routes
+* Manages layout rendering
+
 Example routing:
 
+```jsx
 <Route path='/' element={<Home />} />
 <Route path='/login' element={<Login />} />
 <Route path='/register' element={<Register />} />
+```
+
 Protected routes are used for:
 
-Admin pages
-Author dashboard
-User profile
-Article editing pages
+* Admin pages
+* Author dashboard
+* User profile
+* Article editing pages
+
 Main routing component.
 
 Responsibilities:
 
-Defines application routes
-Connects all pages/components
-Controls navigation flow
-src/store/authStore.js
+* Defines application routes
+* Connects all pages/components
+* Controls navigation flow
+
+---
+
+## src/store/authStore.js
+
 Global authentication state management using Zustand.
 
 Stores:
 
-Logged-in user data
-JWT token
-Authentication status
+* Logged-in user data
+* JWT token
+* Authentication status
+
 Purpose:
 
-Global auth handling
-Session persistence
-Easy access to user information
-src/utils/url.js
+* Global auth handling
+* Session persistence
+* Easy access to user information
+
+---
+
+## src/utils/url.js
+
 Contains backend base URL.
 
 Purpose:
 
-Centralized API endpoint management
-Easy environment switching
-src/components/ProtectedRoute.jsx
+* Centralized API endpoint management
+* Easy environment switching
+
+---
+
+## src/components/ProtectedRoute.jsx
+
 Protects private routes.
 
 Responsibilities:
 
-Checks authentication
-Restricts unauthorized access
-Redirects users when not logged in
-Important Components
-Header.jsx
+* Checks authentication
+* Restricts unauthorized access
+* Redirects users when not logged in
+
+---
+
+# Important Components
+
+## Header.jsx
+
 Navigation bar component.
 
 Contains:
 
-Navigation links
-Login/Register buttons
-User profile access
-Home.jsx
+* Navigation links
+* Login/Register buttons
+* User profile access
+
+---
+
+## Home.jsx
+
 Landing page of the application.
 
 Displays:
 
-Blog articles
-Featured content
-Latest posts
-Login.jsx & Register.jsx
+* Blog articles
+* Featured content
+* Latest posts
+
+---
+
+## Login.jsx & Register.jsx
+
 Authentication components.
 
 Features:
 
-User login
-User registration
-Form validation
-API integration
-WriteArticles.jsx
+* User login
+* User registration
+* Form validation
+* API integration
+
+---
+
+## WriteArticles.jsx
+
 Used by authors to create articles.
 
 Features:
 
-Create blog posts
-Upload article images
-Submit article data to backend
-EditArticle.jsx
+* Create blog posts
+* Upload article images
+* Submit article data to backend
+
+---
+
+## EditArticle.jsx
+
 Used to update existing blog posts.
 
-ArticleByID.jsx
+---
+
+## ArticleByID.jsx
+
 Displays complete article details.
 
 Features:
 
-Article content
-Comments
-Author information
-AdminProfile.jsx
+* Article content
+* Comments
+* Author information
+
+---
+
+## AdminProfile.jsx
+
 Admin dashboard component.
 
 Features:
 
-Manage users
-Manage articles
-Administrative controls
-AuthorProfile.jsx
+* Manage users
+* Manage articles
+* Administrative controls
+
+---
+
+## AuthorProfile.jsx
+
 Author dashboard.
 
 Features:
 
-View own articles
-Edit/Delete articles
-Manage content
-UserProfile.jsx
+* View own articles
+* Edit/Delete articles
+* Manage content
+
+---
+
+## UserProfile.jsx
+
 User dashboard component.
 
 Displays:
 
-User details
-User activity
-Personalized information
-Detailed Frontend Features
-Authentication System
-Login functionality
-Registration functionality
-JWT token storage
-Persistent sessions
-Protected Routing
+* User details
+* User activity
+* Personalized information
+
+---
+
+# Detailed Frontend Features
+
+## Authentication System
+
+* Login functionality
+* Registration functionality
+* JWT token storage
+* Persistent sessions
+
+---
+
+## Protected Routing
+
 Only authenticated users can access:
 
-Dashboard pages
-Article creation pages
-Edit pages
-Admin controls
-Role-Based UI
+* Dashboard pages
+* Article creation pages
+* Edit pages
+* Admin controls
+
+---
+
+## Role-Based UI
+
 Different UI is shown based on role:
 
-Role	Access
-User	View articles, comment
-Author	Create and manage articles
-Admin	Full system control
-API Integration
+| Role   | Access                     |
+| ------ | -------------------------- |
+| User   | View articles, comment     |
+| Author | Create and manage articles |
+| Admin  | Full system control        |
+
+---
+
+## API Integration
+
 Axios is used for:
 
-Login requests
-Fetching articles
-Posting comments
-Creating articles
-Updating data
-Zustand State Management
+* Login requests
+* Fetching articles
+* Posting comments
+* Creating articles
+* Updating data
+
+---
+
+## Zustand State Management
+
 Used for:
 
-Authentication state
-User information
-Global data sharing
-React Hook Form
+* Authentication state
+* User information
+* Global data sharing
+
+---
+
+## React Hook Form
+
 Provides:
 
-Form validation
-Cleaner form handling
-Better performance
-Responsive UI
+* Form validation
+* Cleaner form handling
+* Better performance
+
+---
+
+## Responsive UI
+
 Application supports:
 
-Mobile devices
-Tablets
-Desktop screens
-Toast Notifications
+* Mobile devices
+* Tablets
+* Desktop screens
+
+---
+
+## Toast Notifications
+
 Used to display:
 
-Success messages
+* Success messages
 
-Error messages
+* Error messages
 
-Login alerts
+* Login alerts
 
-Validation feedback
+* Validation feedback
 
-Authentication System
+* Authentication System
 
-Protected Routes
+* Protected Routes
 
-Role-based UI
+* Role-based UI
 
-CRUD Operations
+* CRUD Operations
 
-State Management using Zustand
+* State Management using Zustand
 
-Form Handling using React Hook Form
+* Form Handling using React Hook Form
 
-Responsive Design
+* Responsive Design
 
-API Integration with Axios
+* API Integration with Axios
 
-Toast Notifications
+* Toast Notifications
 
-Frontend Routing Flow
+---
+
+# Frontend Routing Flow
+
+```bash
 App.jsx
    ↓
 RootLayout.jsx
@@ -281,16 +425,41 @@ RootLayout.jsx
 Pages/Components
    ↓
 Protected Routes
-Common Frontend Commands
-Install dependencies
+```
+
+---
+
+# Common Frontend Commands
+
+## Install dependencies
+
+```bash
 npm install
-Start development server
+```
+
+## Start development server
+
+```bash
 npm run dev
-Create production build
+```
+
+## Create production build
+
+```bash
 npm run build
-Preview build
+```
+
+## Preview build
+
+```bash
 npm run preview
-Full Project Flow
+```
+
+---
+
+# Full Project Flow
+
+```bash
 Frontend (React)
         ↓
 Axios API Requests
@@ -302,69 +471,141 @@ MongoDB Database
 Response Sent Back
         ↓
 Frontend UI Updates
-Environment Variables Summary
-Backend
+```
+
+---
+
+# Environment Variables Summary
+
+## Backend
+
+```env
 PORT=
 DB_URL=
 SECRET_KEY=
 CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
-Frontend
+```
+
+## Frontend
+
+```env
 VITE_API_URL=
-Deployment Suggestions
-Frontend Deployment
-Vercel
-Netlify
-Backend Deployment
-Render
-Database
-MongoDB Atlas
-Author
+```
+
+---
+
+# Deployment Suggestions
+
+## Frontend Deployment
+
+* Vercel
+* Netlify
+
+## Backend Deployment
+
+* Render
+
+
+## Database
+
+* MongoDB Atlas
+
+---
+
+# Author
+
 Developed as a MERN Stack Blog Application using React, Node.js, Express.js, and MongoDB.
 
-Frontend Deployment on Vercel
-Step 1: Push Frontend Code to GitHub
+
+---
+
+# Frontend Deployment on Vercel
+
+## Step 1: Push Frontend Code to GitHub
+
+```bash
 git add .
 git commit -m "frontend deployment"
 git push
-Step 2: Create Vercel Account
+```
+
+---
+
+## Step 2: Create Vercel Account
+
 Visit:
 
+```bash
 https://vercel.com
+```
+
 Login using GitHub.
 
-Step 3: Import Frontend Repository
+---
+
+## Step 3: Import Frontend Repository
+
 Inside Vercel:
 
+```bash
 Add New Project
        ↓
 Import Git Repository
+```
+
 Select frontend repository.
 
-Step 4: Configure Frontend Deployment
-Field	Value
-Framework Preset	Vite
-Root Directory	frontend
-Build Command	npm run build
-Output Directory	dist
-Step 5: Add Environment Variables
+---
+
+## Step 4: Configure Frontend Deployment
+
+| Field            | Value         |
+| ---------------- | ------------- |
+| Framework Preset | Vite          |
+| Root Directory   | frontend      |
+| Build Command    | npm run build |
+| Output Directory | dist          |
+
+---
+
+## Step 5: Add Environment Variables
+
 Add frontend environment variable:
 
+```env
 VITE_API_URL=https://blog-backend.onrender.com
+```
+
 Purpose:
 
-Connects frontend with deployed backend APIs
-Step 6: Deploy Frontend
+* Connects frontend with deployed backend APIs
+
+---
+
+## Step 6: Deploy Frontend
+
 Click:
 
+```bash
 Deploy
+```
+
 Vercel generates frontend URL.
 
 Example:
 
+```bash
 https://blog-app.vercel.app
-Frontend Notes
-Update VITE_API_URL after backend deployment
-Always build project before deployment
-Verify backend API URL before production
+```
+
+---
+---
+
+## Frontend Notes
+
+* Update `VITE_API_URL` after backend deployment
+* Always build project before deployment
+* Verify backend API URL before production
+
