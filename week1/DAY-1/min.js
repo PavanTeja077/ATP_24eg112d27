@@ -1,3 +1,4 @@
+// 4. Find the smallest element in marks array
 let a=[90,78,65,98]
 let min=a[0];
 for(let i=1;i<a.length;i++)
