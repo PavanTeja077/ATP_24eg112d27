@@ -1,3 +1,5 @@
+// 6. Write a function that receives an 
+//     array as arg and return their sum
 function sumArray(arr) {
   let sum = 0;
 
